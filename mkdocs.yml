@@ -1,0 +1,9 @@
+site_name: Proyecto de Modelos Probabilísticos
+
+nav:
+  - Inicio: index.md
+  - API: api.md
+
+theme: 
+  name: material
+  language: es
