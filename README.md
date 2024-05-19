@@ -99,7 +99,17 @@ Para salir de la visualización, utilizar `Ctrl + C`, de otro modo dejar el proc
 
 ### Para ejecutar el proyecto
 
-- En una nueva terminal ejecutar el siguiente comando para activar Celery Worker (más detalles en la documentación):
+- En una nueva terminal ejecutar el siguiente comando para activar **Redis** (más detalles en la documentación): 
+
+```bash
+redis-server
+```
+
+dejar esta terminal "corriendo".
+
+Nota: en sistemas Linux usualmente ya está corriendo como *servicio del sistema* y por tanto dará un error de que ya está ocupado el proceso. En ese caso es posible ignorar este paso.
+
+- En una nueva terminal ejecutar el siguiente comando para activar **Celery Worker** (más detalles en la documentación):
 
 ```bash
 celery -A tasks worker --loglevel=INFO
@@ -107,7 +117,7 @@ celery -A tasks worker --loglevel=INFO
 
 dejar esta terminal "corriendo".
 
-- En una nueva terminal ejecutar el siguiente comando para activar Celery Beat (más detalles en la documentación):
+- En una nueva terminal ejecutar el siguiente comando para activar **Celery Beat** (más detalles en la documentación):
 
 ```bash
 celery -A tasks beat --loglevel=INFO
@@ -115,5 +125,4 @@ celery -A tasks beat --loglevel=INFO
 
 dejar esta terminal "corriendo".
 
-- 
-
+En este punto, ya el código de ejemplo debería estar importando y guardando datos en la base de datos, según está detallado en `models.py` y `tasks.py`.

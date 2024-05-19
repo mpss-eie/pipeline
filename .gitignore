@@ -10,6 +10,11 @@ __pycache__/
 # macOS
 .DS_Store
 
+# Databases
+*.sqlite3
+*.db
+*.rdb
+
 # C extensions
 *.so
 
