@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Float, create_engine
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import configparser
@@ -18,6 +18,7 @@ class TestModel(Base):
     __tablename__ = "test_table"
 
     timestamp = Column(Integer, primary_key=True)
+    random_fact = Column(String)
 
 
 # Crear la conexión a la base de datos SQLite3

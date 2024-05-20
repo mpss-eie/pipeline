@@ -4,7 +4,7 @@ Esta es la documentación del proyecto de programación de IE0405 - Modelos Prob
 
 ## Objetivo general
 
-Implementar una canalización (*pipeline*) en tiempo real para procesamiento y análisis de datos, utilizando las herramientas computacionales de Python y a partir de una fuente de datos externa.
+Implementar una canalización (*pipeline*) en tiempo real para procesamiento y análisis de datos a partir de una fuente de datos externa, utilizando las herramientas computacionales de Python.
 
 ## Objetivos específicos
 

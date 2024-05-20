@@ -21,10 +21,15 @@ app = Celery("tasks", broker="redis://localhost")
 # Configurar las tareas de Celery
 @app.task
 def test_task():
-    record = TestModel(timestamp=int(datetime.now().timestamp()))
+    random_fact = requests.get(url).json()["text"]
+    record = TestModel(
+        timestamp=int(datetime.now().timestamp()), 
+        random_fact=random_fact
+    )
     session.add(record)
     session.commit()
-    return "Hello world!"
+    return "¡Hola mundo!"
+
 
 # ----------
 # Configurar aquí las tareas de Celery para el procesamiento de los datos
