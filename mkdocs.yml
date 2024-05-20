@@ -11,7 +11,7 @@ theme:
   name: material
   language: es
   palette:
-    primary: purple
+    primary: black
   logo: img/plot.png
   favicon: img/plot.png
   features:
