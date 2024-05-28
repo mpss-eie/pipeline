@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import configparser
@@ -14,11 +14,17 @@ Base = declarative_base()
 
 
 # Definir los modelos
-class TestModel(Base):
-    __tablename__ = "test_table"
+class TestData(Base):
+    __tablename__ = "test_data"
 
-    timestamp = Column(Integer, primary_key=True)
-    random_fact = Column(String)
+    id = Column(Integer, primary_key=True)
+    timestamp = Column(DateTime)
+    pm10 = Column(Float)
+    pm25 = Column(Float)
+    latitude = Column(Float)
+    longitude = Column(Float)
+    altitude = Column(Float)
+    country = Column(String)
 
 
 # Crear la conexión a la base de datos SQLite3

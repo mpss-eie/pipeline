@@ -1,5 +1,10 @@
 # Proyecto de programación
 
+Este es el proyecto de:
+
+- Fulanito de Tal, B74653
+- Mengano de Tal, B083472
+
 Esta es la documentación del proyecto de programación de IE0405 - Modelos Probabilísticos de Señales y Sistemas.
 
 ## Objetivo general
@@ -13,8 +18,8 @@ Implementar una canalización (*pipeline*) en tiempo real para procesamiento y a
 3. Utilizar administradores de tareas (Celery Worker) y planificadores de tareas (Celery Beat) para ejecutar tareas periódicas.
 4. Utilizar un manejador de bases de datos (SQLite3, PostgreSQL) y un mapeador de objetos relacional (SQLAlchemy) para interactuar con bases de datos.
 5. Procesar los datos obtenidos para tratamiento y análisis.
-6. Hacer análisis estadístico descriptivo y modelado probabilístico de los datos recopilados.
-7. Graficar los datos recopilados y sus análisis.
+6. Utilizar herramientas estadísticas de Python para hacer análisis estadístico descriptivo y modelado probabilístico de los datos recopilados.
+7. Graficar los datos recopilados y sus análisis para visualización y análisis preliminar.
 8. Crear documentación del proyecto en forma de página web para presentación al público en general.
 
 ## Sobre la documentación
