@@ -24,9 +24,9 @@ app = Celery("tasks", broker="redis://localhost")
 def cargar_datos_task():
     #cambiar esto por una conexion a un API
     df = pd.read_csv("all_week.csv")
-    qs  =  df.to_dict('records')
+    tembloresJsonList  =  df.to_dict('records')
 
-    for temblor in qs:
+    for temblor in tembloresJsonList:
         if session.query(TestData).filter_by(id=temblor["id"]).first():
             continue
         else:
@@ -147,24 +147,20 @@ app.conf.beat_schedule = {
         "task": "tasks.cargar_datos_task",
         "schedule": timedelta(seconds=period),
     },
-    "test-schedule-task": {
-        "task": "tasks.schedule_task",
-        "schedule": timedelta(minutes=60),
-    },
     "test-media-task": {
         "task": "tasks.media_task",
-        "schedule": timedelta(seconds=60),
+        "schedule": timedelta(seconds=period*2),
     },
     "test-varianza-task": {
         "task": "tasks.variance_task",
-        "schedule": timedelta(seconds=60),
+        "schedule": timedelta(seconds=period*2),
     },
     "test-desviacion-task": {
         "task": "tasks.standard_deviation_task",
-        "schedule": timedelta(seconds=60),
+        "schedule": timedelta(seconds=period*2),
     },
     "test-kurtosis-inclinacion-task": {
         "task": "tasks.kurtosis_inclinacion_task",
-        "schedule": timedelta(seconds=60),
+        "schedule": timedelta(seconds=period*2),
     },
 }

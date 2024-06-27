@@ -31,3 +31,5 @@ En el archivo `mkdocs.yml` está la configuración básica de esta documentació
 En la carpeta `img/` pueden colocar imágenes como gráficas y similares.
 
 Pueden agregar la estructura de archivos y carpetas que sea necesaria.
+
+
